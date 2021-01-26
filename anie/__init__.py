@@ -83,6 +83,7 @@ if ENV:
     STRICT_GBAN = bool(os.environ.get('STRICT_GBAN', False))
     WORKERS = int(os.environ.get('WORKERS', 8))
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
+    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     BAN_STICKER = os.environ.get('BAN_STICKER',
                                  'CAADAgADOwADPPEcAXkko5EB3YGYAg')
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
