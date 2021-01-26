@@ -20,7 +20,7 @@ import heroku3
 from anie import OWNER_ID, update, UPSTREAM_REPO_URL
 
 
-# UPSTREAM_REPO_URL = "https://github.com/anieXOP/anie-ROBOT"
+# UPSTREAM_REPO_URL = "https://github.com/Amarnathcdj/LEGEND-ROBOT-1"
 HEROKU_APP_NAME = None
 HEROKU_API_KEY = None
 
