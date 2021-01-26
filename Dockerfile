@@ -65,11 +65,11 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/LEGEND
-RUN git clone -b shiken https://github.com/AnimeKaizoku/LEGEND /root/LEGEND
-WORKDIR /root/LEGEND
+RUN git clone -b shiken https://github.com/amarnathcdj/aniebot /root/anie
+WORKDIR /root/anie
 
-#Copy config file to /root/LEGEND/LEGEND
-COPY ./LEGEND/sample_config.py ./LEGEND/config.py* /root/LEGEND/LEGEND/
+#Copy config file to /root/anie/anie
+COPY ./anie/sample_config.py ./anie/config.py* /root/anie/anie/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -77,4 +77,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","LEGEND"]
+CMD ["python3","-m","anie"]
