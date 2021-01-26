@@ -4,6 +4,7 @@ lxml
 numpy
 gitpython==3.1.11
 beautifulsoup4
+dnspython
 requests
 sqlalchemy
 python-telegram-bot==12.8
