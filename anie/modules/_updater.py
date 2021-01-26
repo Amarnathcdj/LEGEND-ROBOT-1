@@ -1,14 +1,4 @@
-#MAXE BY anie X AND TEAM anie
-# MADE FOR anie ROBOT
-#FULL CREDITS TEAM anie🔥🔥🔥
-#IF YOU KANG THIS THAN KEEP CREDITS
-#1STUPDATER FOR GROUP MANAGEMENT BOTS
-
-#PLEASE KEEP CREDITS PLEASE 🥺🥺🥺
-
-
-#I KNOW YOU ARE GOOD YOU KEEP MY CREDITS 😘
-
+#Made from MissJuliaBOT Updater
 
 from anie.event import register
 from os import remove, execle, path, environ
