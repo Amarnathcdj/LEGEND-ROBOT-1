@@ -18,15 +18,15 @@ async def is_register_admin(chat, user):
 
         return isinstance(
             (
-                await tbot(functions.channels.GetParticipantRequest(chat, user))
+                await update(functions.channels.GetParticipantRequest(chat, user))
             ).participant,
             (types.ChannelParticipantAdmin, types.ChannelParticipantCreator),
         )
     if isinstance(chat, types.InputPeerChat):
 
-        ui = await tbot.get_peer_id(user)
+        ui = await update.get_peer_id(user)
         ps = (
-            await tbot(functions.messages.GetFullChatRequest(chat.chat_id))
+            await update(functions.messages.GetFullChatRequest(chat.chat_id))
         ).full_chat.participants.participants
         return isinstance(
             next((p for p in ps if p.user_id == ui), None),
@@ -67,7 +67,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         await event.reply("Processing...")
         try:
-            downloaded_file_name = await tbot.download_media(
+            downloaded_file_name = await update.download_media(
                 reply_message, TEMP_DOWNLOAD_DIRECTORY
             )
         except Exception as e:
@@ -83,7 +83,7 @@ async def _(event):
     if "image" in contentType:
         with io.BytesIO(output_file_name.content) as remove_bg_image:
             remove_bg_image.name = "rmbg.png"
-            await tbot.send_file(
+            await update.send_file(
                 event.chat_id,
                 remove_bg_image,
                 force_document=True,
